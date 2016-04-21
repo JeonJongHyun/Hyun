@@ -1,0 +1,58 @@
+<div ui-content-for="title">
+    <span>이벤트</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section">
+
+
+
+
+            <fieldset id="sliding-advanced" >
+                <legend>상품 이벤트</legend>
+                <div ng-repeat="puzzle in puzzles">
+
+                    <div class="alert-success calAlert" ng-if="!currentUser">
+                        <h4>로그인하셔야 정보가 저장이 됩니다.</h4>
+                    </div>
+                    <p>빈칸 옆 블럭을 클릭해 블럭을 이동 시키세요.</p>
+                    <p>상위 랭킹에게는 신혼여행 후 푸짐한 선물을 드리도록 하겠습니다.ㅋ</p>
+                    <!--
+                    <div class="src">
+                        <input type="text" ng-model="puzzle.src"/>
+                    </div>-->
+                    <div class="status">
+                        <h4>moves: <strong>{{puzzle.api.moves}}</strong></h4><br/>
+                       <!-- solved: <strong>{{puzzle.api.isSolved()}}</strong> -->
+                    </div>
+                    <div class="size">
+                        <!--
+                        rows: <input type="text" ng-model="puzzle.rows" size="2"/>
+                        cols: <input type="text" ng-model="puzzle.cols" size="2"/><br/>
+                        -->
+                        <button type="button" class="btn btn-success btn-sm" ng-click="puzzle.api.shuffle()">다시</button>
+                        <!--<button type="button" class="btn btn-danger btn-sm" ng-click="puzzle.api.solve()">solve</button>-->
+                        <button type="button" class="btn btn-info btn-sm" ng-click="ranking()">순위</button>
+                    </div>
+                    <sliding-puzzle api="puzzle.api" size="{{puzzle.rows}}x{{puzzle.cols}}" src="{{puzzle.src}}"></sliding-puzzle>
+                </div>
+            </fieldset>
+
+        </div>
+        <script type="text/ng-template" id="myModalGame.html">
+            <div class="modal-header">
+                <h3 class="modal-title">순 위</h3>
+            </div>
+            <div class="modal-body">
+                <ol  ng-repeat="ranking in allRanking">
+                    <li>{{ranking.moves}}번  {{ranking.name}}</li>
+                </ol>
+                <h4 ng-show="!allRanking.length">등록된 인원이 없습니다.</h4>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" type="button" ng-click="close()">닫기</button>
+            </div>
+        </script>
+    </div>
+</div>

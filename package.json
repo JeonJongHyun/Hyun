@@ -1,0 +1,27 @@
+{
+  "name": "webApp",
+  "version": "1.0.0",
+  "description": "Hyeon's",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "jwt-simple": "^0.3.0",
+    "moment": "^2.10.3",
+    "mongoose": "^4.1.1",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
+    "path": "^0.11.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "angularjs",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,22 @@
+<h1 class="app-name">Menu List</h1>
+
+<div class="scrollable">
+  <h1 class="scrollable-header app-name">Menu List</h1>
+  <div class="scrollable-content">
+    <div class="list-group" ui-turn-off='uiSidebarLeft'>
+      <a class="list-group-item" href="/">Home <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/photo">사진 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/map">찾아오는길 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/message">남기는글 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/order">예식 순서 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/gentleman">그남자이야기 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/lady">그여자이야기 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/tour">신혼여행 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/game">이벤트 <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/login" ng-if="!currentUser">Login<span class="label label-danger">여기요!</span> <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="/user" ng-if="currentUser">사용자<i class="fa fa-chevron-right pull-right"></i></a>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div ui-content-for="title">
+    <span>예식 순서</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section">
+
+            <ui-state id='activeTab' default='1'></ui-state>
+
+            <ul class="nav nav-tabs">
+
+                <li ui-class="{'active': activeTab == 1}">
+                    <a ui-set="{'activeTab': 1}">예식 순서</a>
+                </li>
+                <li ui-class="{'active': activeTab == 2}">
+                    <a ui-set="{'activeTab': 2}">찬송가</a>
+                </li>
+                <li ui-class="{'active': activeTab == 3}">
+                    <a ui-set="{'activeTab': 3}">성경말씀</a>
+                </li>
+            </ul>
+
+
+
+            <div ui-if="activeTab == 1">
+                <h3 class="page-header">주례: 공광승 목사님</h3>
+                <p>1.  개식사   주례자</p>
+                <p>2.  화축점화  양가 어머니</p>
+                <p>3.  신랑, 신부 입장</p>
+                <p>4.  찬송 605장</p>
+                <p>5.  기도 : 동산교회 김창진 목사님</p>
+                <p>6.  성경복동 막10장6~9절</p>
+                <p>7.  권면의 말씀  하나님이 짝 지어주셨습니다.</p>
+                <p>8.  서약</p>
+                <p>9.  축복기도</p>
+                <p>10. 성혼선언</p>
+                <p>11. 축가</p>
+                <p>12. 인사</p>
+                <p>13. 축도</p>
+                <p>14. 신랑,신부인사</p>
+                <p>15. 새출발</p>
+                <br/>
+                <br/>
+            </div>
+
+            <div ui-if="activeTab == 2">
+                <h3 class="page-header">찬송(605장)</h3>
+                <br/>
+                <p>1. 오늘모여 찬송함은 형제자매 즐거움</p>
+                <p>   거룩하신 주뜻대로 혼인예식 합니다.</p>
+                <p>   신랑신부 이두사람 한모되게 하시고</p>
+                <p>   온집안이 하나되고 한뜻되게 하소서</p>
+                <br/>
+                <p>2. 세상에서 사는동안 한길가게 하시고</p>
+                <p>   맘과뜻이 하나되어 주따르게 하소서</p>
+                <p>   서로믿고 존경하며 서로돕고 사랑해</p>
+                <p>   고와낙을 함께하며 승리하게 하소서</p>
+                <br/>
+                <p>3. 아버지여 우리들의 기도하고 바람은</p>
+                <p>   저들부부 세상에서 해로하게 하소서</p>
+                <p>   이두사람 감화하사 항상주를 섬기며</p>
+                <p>   이세상을 살아갈때 행복하게 하소서</p>
+                <br/>
+                <p>   아멘</p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
+
+            <div ui-if="activeTab == 3">
+                <h3 class="page-header">막10 : 6 ~ 9</h3>
+                <br/>
+                <br/>
+                <p>6 창조 때로부터 사람을 남자와 여자로 지으셨으니</p>
+                <br/>
+                <p>7 이러므로 사람이 그 부모를 떠나서</p>
+                <br/>
+                <p>8 그 둘이 한 몸이 될지니라 이러한즉 이제 둘이 아니요 한몸이니</p>
+                <br/>
+                <p>9 그러므로 하나님이 짝지어주신 것을 사람이 나누지 못할 지니라 하시더라</p>
+                <br/>
+                <br/>
+                <br/>
+
+            </div>
+
+        </div>
+
+
+        </div>
+    </div>
+</div>

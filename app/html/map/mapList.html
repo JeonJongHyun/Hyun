@@ -1,0 +1,52 @@
+<div ui-content-for="title">
+    <span>찾아오는 길</span>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section">
+
+            <ui-gmap-google-map
+                    center="map.center"
+                    zoom="map.zoom"
+                    dragging="map.dragging"
+                    bounds="map.bounds"
+                    events="map.events"
+                    options="map.options"
+                    pan="true"
+                    control="map.control">
+
+                <ui-gmap-window show="map.infoWindowWithCustomClass.show" coords="map.infoWindowWithCustomClass.coords" isIconVisibleOnClick="false" options="map.infoWindowWithCustomClass.options">
+                    결혼식 장소 : 영주제일 교회 본관
+                    일시 : 2015-10-24  12시
+                    주차는 지도 Mark 표시된 곳에 해주시면 됩니다.
+                </ui-gmap-window>
+
+                <ui-gmap-marker ng-repeat="m in map.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)" idKey="m.id" options="m.options">
+                    <ui-gmap-window ng-cloak  coords="map.infoWindowWithCustomClass.coords" isIconVisibleOnClick="false" options="map.infoWindowWithCustomClass.options">
+                        <p>{{m.title}}</p>
+                        <p class="muted">My marker will stay open when the window is popped up!</p>
+                    </ui-gmap-window>
+                </ui-gmap-marker>
+
+
+            </ui-gmap-google-map>
+
+        </div>
+        <div class="section">
+            <div >
+                <h3 class="home-heading">Welcomes to YeongJu</h3>
+                <p>Thank you for visiting our wedding, <br>
+                    I would like to extend my sincere gratitude and appreciation for your ongoing interest and continuous support for Wedding.<br>
+                </p>
+                <pre>먼길 찾아주시는 것에 대해 감사에 말씀 올려드립니다.이동하시는 것에 대해 차편을 마련하지 못한 것에 대해 사과의 말씀을 드리며 오시는 길 안전하고 조심히 오세요.
+문의연락처: 010-9366-0308 (전종현)</pre>
+                <p>
+                    1. 식사는 남서울 예식장 지하에 마련되어 있습니다. 지도를 참조 하세요.<br/>
+                    2. 지도를 확대하면 서울 방면과 부산방면에서 들어오는 IC를 표기하였습니다.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
